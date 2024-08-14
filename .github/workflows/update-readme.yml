@@ -17,19 +17,24 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.TOKEN }}
+        token: ${{ secrets.PAT }}
 
     - name: Update README
-      env:
-        GH_TOKEN: ${{ secrets.TOKEN }}
       run: |
         # Update README.md with new content
         cat > README.md << EOL
         <div align="center">
-          <img src="https://github-readme-stats.vercel.app/api?username=Bumbi-dev&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&token=${{ secrets.TOKEN }}" height="150" alt="stats graph"  />
-          <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Bumbi-dev&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&token=${{ secrets.TOKEN }}" height="150" alt="languages graph"  />
+          <img src="https://github-readme-stats.vercel.app/api?username=Bumbi-dev&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&token=TOKEN_PLACEHOLDER" height="150" alt="stats graph"  />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Bumbi-dev&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&token=TOKEN_PLACEHOLDER" height="150" alt="languages graph"  />
         </div>
         EOL
+
+    - name: Replace token placeholder
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        ENCODED_TOKEN=$(echo -n $TOKEN | xxd -p -c 256 | tr -d '\n' | sed 's/\(..\)/%\1/g')
+        sed -i "s/TOKEN_PLACEHOLDER/$ENCODED_TOKEN/g" README.md
 
     - name: Commit and push if changed
       run: |

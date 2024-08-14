@@ -10,18 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-
-      - name: Replace TOKEN in README
+      - name: Set up Git
         run: |
-          sed -i "s/TOKEN/${{ secrets.TOKEN }}/g" README.md
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-email@example.com'
 
-      - name: Commit updated README
+      - name: Commit and Push Changes
         run: |
-          git config --global user.email "emanuel.bumbuta@gmail.com"
-          git config --global user.name "Bumbi"
           git add README.md
-          git commit -m "Update README with private contributions"
-          git push
+          git commit -m "Update README with private contributions" || echo "No changes to commit"
+          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Bumbi-dev/Bumbi-dev.git
+
 

@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Manu and I'm currently a student, learning to make web and android apps.</h2>
+<h2 align="left">Hi 👋! My name is Manu and I'm currently a student, learning to make web and android applications.</h2>
 
 ###
 

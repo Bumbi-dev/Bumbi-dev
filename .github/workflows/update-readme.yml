@@ -4,21 +4,31 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2 
+    - name: Checkout the repository
+      uses: actions/checkout@v2
 
-      - name: Set up Git
-        run: |
-          git config --global user.name 'Bumbi-dev'
-          git config --global user.email 'emanuel.bumbuta@gmail.com'
+    - name: Update README
+      env:
+        GH_TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        # Update README.md with new content
+        cat > README.md << EOL
+        <div align="center">
+          <img src="https://github-readme-stats.vercel.app/api?username=Bumbi-dev&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&token=${{ secrets.TOKEN }}" height="150" alt="stats graph"  />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Bumbi-dev&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&token=${{ secrets.TOKEN }}" height="150" alt="languages graph"  />
+        </div>
+        EOL
 
-      - name: Update README
-        run: |
-          git add README.md
-          git commit -m "Update README with private contributions" || echo "No changes to commit"
-          git push
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add README.md
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with latest stats" && git push)

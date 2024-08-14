@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2  # This step checks out the repository
+        uses: actions/checkout@v2 
 
       - name: Set up Git
         run: |
-          git config --global user.name 'Your GitHub Username'
-          git config --global user.email 'your-email@example.com'
+          git config --global user.name 'Bumbi-dev'
+          git config --global user.email 'emanuel.bumbuta@gmail.com'
 
       - name: Update README
         run: |

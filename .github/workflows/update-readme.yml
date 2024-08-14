@@ -1,24 +1,24 @@
-name: Update README with GitHub Stats
+name: Update README
 
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2  # This step checks out the repository
+
       - name: Set up Git
         run: |
-          git config --global user.name 'Bumbi'
-          git config --global user.email 'emanuel.bumbuta@gmail.com'
+          git config --global user.name 'Your GitHub Username'
+          git config --global user.email 'your-email@example.com'
 
-      - name: Commit and Push Changes
+      - name: Update README
         run: |
           git add README.md
           git commit -m "Update README with private contributions" || echo "No changes to commit"
-          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Bumbi-dev/Bumbi-dev
-
-
+          git push

@@ -19,8 +19,8 @@ jobs:
 
       - name: Commit updated README
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "emanuel.bumbuta@gmail.com"
+          git config --global user.name "Bumbi"
           git add README.md
           git commit -m "Update README with private contributions"
           git push

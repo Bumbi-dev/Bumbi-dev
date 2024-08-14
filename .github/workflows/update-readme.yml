@@ -3,7 +3,7 @@ name: Update README with GitHub Stats
 on:
   push:
     branches:
-      - main  # Run this workflow on pushes to the main branch
+      - main 
 
 jobs:
   update-readme:
@@ -12,13 +12,13 @@ jobs:
     steps:
       - name: Set up Git
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-email@example.com'
+          git config --global user.name 'Bumbi'
+          git config --global user.email 'emanuel.bumbuta@gmail.com'
 
       - name: Commit and Push Changes
         run: |
           git add README.md
           git commit -m "Update README with private contributions" || echo "No changes to commit"
-          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Bumbi-dev/Bumbi-dev.git
+          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/Bumbi-dev/Bumbi-dev
 
 

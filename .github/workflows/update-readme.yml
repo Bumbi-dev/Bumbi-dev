@@ -1,0 +1,27 @@
+name: Update README with GitHub Stats
+
+on:
+  push:
+    branches:
+      - main  # Run this workflow on pushes to the main branch
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Replace TOKEN in README
+        run: |
+          sed -i "s/TOKEN/${{ secrets.TOKEN }}/g" README.md
+
+      - name: Commit updated README
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git add README.md
+          git commit -m "Update README with private contributions"
+          git push
+

@@ -17,7 +17,7 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.PAT }}
+        token: ${{ secrets.TOKEN }}
 
     - name: Update README
       run: |

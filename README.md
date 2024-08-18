@@ -9,6 +9,12 @@
 
 ###
 
+<p align="left"><strong>FTC Robotics</strong> - sole developer for my school's team since 2020, responsible for programming the control systems for both controlled and autonomous robots making both User Controlled and Autonomous operating modes.</p>
+
+###
+
+###
+
 <p align="left">Below are my skills, ranked according to my level of understanding:</p>
 
 ###

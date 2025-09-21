@@ -35,17 +35,6 @@
 </div>
 
 <div align="left">
-  <h3>IDEs</h3>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="30" alt="vscode logo" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" height="30" alt="androidstudio logo" />
-  <img width="12" />
-  <img src="https://www.cursor.com/assets/images/logo.svg" height="30" alt="Cursor IDE logo" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" height="30" alt="intellij logo" />
-</div>
-
-<div align="left">
   <h3>Frameworks</h3>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="30" alt="tailwindcss logo" />
   <img width="12" />
@@ -57,6 +46,17 @@
   <img src="https://cdn.simpleicons.org/gradle/02303A" height="30" alt="gradle logo" />
   <img width="12" />
   <img src="https://cdn.simpleicons.org/apachemaven/C71A36" height="30" alt="apachemaven logo" />
+</div>
+
+<div align="left">
+  <h3>IDEs</h3>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="30" alt="vscode logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" height="30" alt="androidstudio logo" />
+  <img width="12" />
+  <img src="https://www.cursor.com/assets/images/logo.svg" height="30" alt="Cursor IDE logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" height="30" alt="intellij logo" />
 </div>
 
 <div align="left">

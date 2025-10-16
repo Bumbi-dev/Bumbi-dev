@@ -8,7 +8,7 @@
 
 ###
 
-<p align="left"><strong>FTC Robotics</strong> - sole developer for my school's team since 2020, responsible for programming the control systems for robots making both User Controlled and Autonomous operating modes.</p>
+<p align="left"><strong>FTC Robotics</strong> - developement leader for my school's team during 2022 - 2025, responsible for programming the control systems for robots making both User Controlled and Autonomous operating modes.</p>
 
 ###
 

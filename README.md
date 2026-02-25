@@ -8,7 +8,7 @@
 
 ###
 
-<p align="left"><strong>FTC Robotics</strong> - developement leader for my school's team during 2022 - 2025, responsible for programming the control systems for robots making both User Controlled and Autonomous operating modes.</p>
+<p align="left"><strong>FTC Robotics</strong> - developement leader for my school's team during 2022 - 2025, responsible for programming the control systems for robots making both User Controlled and Autonomous operating modes. In the 2025 regional competition we won 2nd place Control Award, for our unique use of sensors and navigation to achieve a great Autonomous.</p>
 
 ###
 
